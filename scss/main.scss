@@ -1,0 +1,24 @@
+.navbar {
+    &.nav-transparent {
+        background-color: transparent;
+        position: absolute;
+    }
+}
+
+.banner {
+    background-image: url('../img/rio-1_1920.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0 0 0;
+    .col {
+        background-color: #FFF;
+        border-top: 5px solid #7aa88e;
+    }
+}
+
+
+///
+// $verde1: #7aa88e;
+// $verde2: #7ba78e;
+// $cinza: #e5e5e5;
