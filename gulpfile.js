@@ -4,12 +4,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var cleanCss = require('gulp-clean-css');
-var concatCss = require('gulp-concat');
+var concat = require('gulp-concat');
 
 gulp.task('scss', function () {
   return gulp.src(['./scss/style.scss' ])
-    .pipe(sass())
-    ///.pipe(concatCss('style.css'))
+    .pipe(sass({errLogToConsole: true}))
+    ///.pipe(concat('style.css'))
     //.pipe(cleanCss())
     .pipe(gulp.dest('./css'))
 });
@@ -25,7 +25,7 @@ gulp.task('browserSync', function(){
 
 gulp.task('javascript-concat', function(){
     return gulp.src("./js/*.js")
-        .pipe(concatCss("index.js"))
+        .pipe(concat("./index.js"))
         .pipe(gulp.dest('./'))
 });
 

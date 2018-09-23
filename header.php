@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar nav-transparent">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<?php print bloginfo('url'); ?>">
     <?php if(get_custom_logo()): ?>
     <img src="<?php print get_custom_logo(); ?>">
     <?php else: ?>

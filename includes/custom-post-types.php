@@ -22,6 +22,8 @@ function diferenciais_post_type(){
 }
 add_action('init', 'diferenciais_post_type');
 
+//Parceiros
+
 function parceiros_post_type(){
     $labels = array(
         'name' => "Pareceiros",

@@ -1,7 +1,24 @@
 .navbar {
     &.nav-transparent {
+        padding-top: 0px;
+        left: 10%;
         background-color: transparent;
         position: absolute;
+        a{
+            img {
+                background-color: #FFF;
+                width: 25%;
+            }
+        }
+    }
+}
+
+.diferenciais {
+    .coluna-vazia{
+        background-color: #7aa88e;
+    }
+    .coluna-conteudo{
+        background-color: #e5e5e5;
     }
 }
 
@@ -15,6 +32,10 @@
         background-color: #FFF;
         border-top: 5px solid #7aa88e;
     }
+}
+
+.hidden {
+    display: none;
 }
 
 
