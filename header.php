@@ -12,8 +12,11 @@
 <body>
 <nav class="navbar nav-transparent">
   <a class="navbar-brand" href="#">
-    <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-    Teste
+    <?php if(get_custom_logo()): ?>
+    <img src="<?php print get_custom_logo(); ?>">
+    <?php else: ?>
+    <img src="<?php print get_template_directory_uri().'/img/logo.png'; ?>" >
+    <?php endif; ?>
   </a>
 </nav>
 <div class="container-fluid banner">

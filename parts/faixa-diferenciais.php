@@ -5,7 +5,6 @@ $args = array(
     'post_type' => 'diferencias',
     'orderby' => 'menu_order'
 ); ?>
-<pre><?php //var_dump($loop_diferencias) ?></pre>
 
 <?php if($loop_diferencias->have_posts()):  ?>
     <?php while($loop_diferencias->have_posts()): the_post(); ?>
