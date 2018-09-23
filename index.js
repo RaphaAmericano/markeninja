@@ -1,4 +1,7 @@
 (function($){
+
+    $('.carousel').carousel();
+
     $icones = $(".parceiros a");
     $conteudo = $('.pareceiros-conteudo');
     $icones.on('click', function(e){
@@ -12,3 +15,4 @@
         $('#'+alvo).removeClass('hidden');
     });
 }( jQuery ));
+

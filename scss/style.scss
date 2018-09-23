@@ -16,12 +16,25 @@
     }
 }
 
+section {
+    padding: 5em 0 ;
+}
+
 .diferenciais {
     .coluna-vazia{
+        padding: 0;
         background-color: #7aa88e;
     }
     .coluna-conteudo{
+        padding: 8em 0;
         background-color: #e5e5e5;
+    }
+    .carousel-inner {
+        .img-thumbnail{
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -37,11 +50,54 @@
     }
 }
 
+.servicos {
+    .preco{
+        color:#7aa88e;
+    }
+    .conteudo-servico{
+        //max-height: 415px;
+    }
+}
+
+.parceiros {
+    .img-thumbnail {
+        border: none;
+        max-height: 255px;
+    }
+    .parceiros-conteudo {
+        a {
+            color: #7aa88e;
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+            &:visited {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
 .hidden {
     display: none;
 }
 
-
+footer {
+    background-color:#7aa88e;
+    padding: 5em 0;
+    a {
+        color: #FFF;
+        &:hover {
+            color: inherit;
+        }
+        &:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
 ///
 // $verde1: #7aa88e;
 // $verde2: #7ba78e;

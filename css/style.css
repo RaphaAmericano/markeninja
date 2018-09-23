@@ -11,11 +11,19 @@
       width: 30%;
       padding: 15px 30px; }
 
+section {
+  padding: 5em 0; }
+
 .diferenciais .coluna-vazia {
+  padding: 0;
   background-color: #7aa88e; }
 
 .diferenciais .coluna-conteudo {
+  padding: 8em 0;
   background-color: #e5e5e5; }
+
+.diferenciais .carousel-inner .img-thumbnail img {
+  width: 100%; }
 
 .banner {
   background-image: url("../img/rio-1_1920.jpg");
@@ -27,5 +35,32 @@
     background-color: #FFF;
     border-top: 5px solid #7aa88e; }
 
+.servicos .preco {
+  color: #7aa88e; }
+
+.parceiros .img-thumbnail {
+  border: none;
+  max-height: 255px; }
+
+.parceiros .parceiros-conteudo a {
+  color: #7aa88e; }
+  .parceiros .parceiros-conteudo a:hover {
+    color: inherit;
+    text-decoration: none; }
+  .parceiros .parceiros-conteudo a:visited {
+    color: inherit;
+    text-decoration: none; }
+
 .hidden {
   display: none; }
+
+footer {
+  background-color: #7aa88e;
+  padding: 5em 0; }
+  footer a {
+    color: #FFF; }
+    footer a:hover {
+      color: inherit; }
+    footer a:visited {
+      color: inherit;
+      text-decoration: none; }

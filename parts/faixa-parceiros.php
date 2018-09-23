@@ -10,9 +10,9 @@ if($loop_parceiros->have_posts()): $c = 0; $k = 0; $hidden = '';
 ?>
 
 <section class="container parceiros">
-    <div class="row">
+    <div class="row m-4 ">
         <div class="col">
-            <h2 class="text-uppercase">Nossos parceiros</h2>
+            <h2 class="text-uppercase text-center">Nossos parceiros</h2>
         </div>
     </div>
     <div class="row">
@@ -30,7 +30,7 @@ if($loop_parceiros->have_posts()): $c = 0; $k = 0; $hidden = '';
         <div class="col conteudo">
             <?php while($loop_parceiros->have_posts()): $loop_parceiros->the_post(); ?>
             <?php if($k > 0 ){ $hidden = 'hidden'; } ?>
-                <div id="post-<?php print $k;  ?>" class="pareceiros-conteudo <?php print $hidden; ?>"><?php the_content(); ?><a href="#"><?php the_title() ?></a></div>
+                <div id="post-<?php print $k;  ?>" class="parceiros-conteudo <?php print $hidden; ?>"><?php the_content(); ?><a href="#" class="font-weight-bold text-uppercase"><?php the_title() ?></a></div>
             <?php $k++; endwhile; ?>
         </div>
     </div>

@@ -22,6 +22,44 @@ function diferenciais_post_type(){
 }
 add_action('init', 'diferenciais_post_type');
 
+function diferenciais_meta_box(){
+    add_meta_box('diferenciais', 'Imagem', 'diferenciais_meta_box_callback', 'diferenciais', 'normal');
+}
+add_action('add_meta_boxes', 'diferenciais_meta_box');
+
+function diferenciais_meta_box_callback( $post ){
+
+    wp_nonce_field('save_diferencial_data', 'diferencial_meta_box_nonce');
+    $valor = get_post_meta( $post->ID, '_diferencial_value_key', true);
+
+    echo '<input type="hidden" name="diferencial_field">';
+    echo '<button type="button" id="upload-buttom">Upload</button>';
+    //echo image_uploader_field('diferencial_field', $valor);
+}
+
+function save_diferencial_data( $post_id ){
+    if(!isset( $_POST['diferencial_meta_box_nonce'])){
+        return;
+    }
+    if(!wp_verify_nonce( $_POST['diferencial_meta_box_nonce'], 'save_diferencial_data')){
+        return;
+    }
+    if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+        return;
+    }
+    if(!current_user_can('edit_post', $post_id)){
+        return;
+    }
+    if(!isset($_POST['diferencial_field'])){
+        return;
+    }
+
+    $data = sanitize_text_field($_POST['diferencial_field']);
+    update_post_meta( $post_id, '_diferencial_value_key', $data);
+}
+
+add_action('save_post', 'save_diferencial_data');
+
 //Parceiros
 
 function parceiros_post_type(){
